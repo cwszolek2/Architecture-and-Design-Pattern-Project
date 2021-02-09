@@ -1,5 +1,3 @@
-//STATE PATTERN
-//DataStore for GP1's methods.
 
 public class DS1 extends DataStore {
     int temp_c;
@@ -13,7 +11,7 @@ public class DS1 extends DataStore {
     public DS1(){
 
     }
-    //TODO - incoroporate set/get methods
+
     public void set_temp_a(int a){
         temp_a = a;
     }

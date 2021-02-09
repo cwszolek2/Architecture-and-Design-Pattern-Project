@@ -1,5 +1,4 @@
-//**STATE PATTERN**
-//State when gas has been selected and user is pumping gas.
+
 public class PumpGasState extends State {
     MDA_EFSM m;
     OutputProcessor op;

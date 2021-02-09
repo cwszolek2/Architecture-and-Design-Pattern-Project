@@ -1,5 +1,3 @@
-//**STATE PATTERN**
-//Inherited parent abstract class, provides interface for methods that children will use.
 public abstract class State {
 
     public abstract void activate();

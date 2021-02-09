@@ -1,5 +1,4 @@
-//**STATE PATTERN**
-//State where pay credit was selected by user.  Mainly used to check pin from user.
+
 public class PayDebitState extends State {
     MDA_EFSM m;
     OutputProcessor op;

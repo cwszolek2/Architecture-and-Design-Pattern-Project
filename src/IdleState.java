@@ -1,5 +1,4 @@
-//**STATE PATTERN**
-//Idle state is a GP state that was created and awaiting commands from the user.
+
 public class IdleState extends State {
     MDA_EFSM m;
     OutputProcessor op;

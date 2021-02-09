@@ -1,5 +1,4 @@
-//**STATE PATTERN**
-//State before Gas Pump has been activated for GP.  Can only be activated.
+
 public class OffState extends State {
     MDA_EFSM m;
     OutputProcessor op;

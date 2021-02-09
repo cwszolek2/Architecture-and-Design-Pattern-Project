@@ -1,8 +1,6 @@
-//Primary class of implementation
-//Represents a gas pump of type 2.
-//Part of Abstract Factory Pattern.
+
 public class GP2{
-    //Instance Variable
+    //Instantce Variable
     MDA_EFSM m;
     DS2 d;
     GP2Factory af;
@@ -12,65 +10,85 @@ public class GP2{
     public GP2() {
 
     }
-    //Creates Application of abstract factory, datastore, output processor, and mda_efsm.
-    public void activate(float a, float b, float c){
+    public void Activate(float a, float b, float c){
         if((a > 0) && (b > 0) && (c > 0)){
-
+            d.temp_a = a;
+            d.temp_b = b;
+            d.temp_c = c;
             af = new GP2Factory();
             d = af.makeDataStore();
             op = new OutputProcessor(af, d);
             m = new MDA_EFSM(op);
-            d.temp_a = a;
-            d.temp_b = b;
-            d.temp_c = c;
             m.activate();
         }
     }
-    public void start(){
+    public void Start(){
         m.start();
     }
-    public void payCredit(){
+    public void PayCredit(){
         m.payCredit();
     }
-    public void reject(){
+    public void Reject(){
         m.reject();
     }
-    public void payDebit(String p){
+    public void PayDebit(String p){
         d.temp_p = p;
         m.payDebit();
     }
-    public void pin(String pin){
+    public void Pin(String pin){
         if(d.pin == pin)
             m.correctPin();
         else m.incorrectPin(1);
     }
-    public void cancel(){
+    public void Cancel(){
         m.cancel();
     }
-    public void approved(){
+    public void Approved(){
         m.approved();
     }
-    public void regular(){
+    public void Regular(){
         m.selectGas(1);
     }
-    public void superg(){
+    public void Super(){
         m.selectGas(2);
     }
-    public void diesel(){
+    public void Diesel(){
         m.selectGas(3);
     }
-    public void startPump(){
+    public void StartPump(){
         if ( d.price > 0)
             m.startPump();
     }
-    public void pumpGallon(){
+    public void PumpGallon(){
+        //Maybe should indicate on e
         m.pump();
     }
-    public void stopPump(){
+    public void StopPump(){
         m.stopPump();
     }
-    public void fullTank(){
+    public void FullTank(){
         m.stopPump();
     }
+
+
+    /*
+        Activate(float a, float b, float c)
+        Start()
+        PayCredit()
+        Reject()
+        PayDebit(string p)
+        Pin(string x)
+        Cancel()
+        Approved()
+        Diesel()
+        Regular()
+        Super()
+        StartPump()
+        PumpGallon()
+        StopPump()
+        FullTank()
+
+     */
+
 
 }

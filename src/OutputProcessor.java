@@ -19,7 +19,6 @@ public class OutputProcessor{
     EnterPinMsg epm;
     InitializeData id;
     EjectCard ec;
-    SetW sw;
     //State s;
 
     public OutputProcessor(AbstractFactory afToSet, DataStore ds){
@@ -42,15 +41,18 @@ public class OutputProcessor{
         epm = af.makeEnterPinMsg();
         id = af.makeInitializeData();
         ec = af.makeEjectCard();
-        sw = af.makeSetW();
     }
+    public void setW(int w){
 
-    public void storePrices() { storepri.storePrices(d);    }
+    }
+    public void storePrices(){
+        storepri.storePrices();
+    }
     public void payMsg(){
         pm.payMsg();
     }
     public void storeCash(){
-        sc.storeCash(d);
+        sc.storeCash();
     }
     public void displayMenu(){
         dp.displayMenu();
@@ -59,10 +61,10 @@ public class OutputProcessor{
         rm.rejectMsg();
     }
     public void setPrice(int p){
-        setpri.setPrice(p, d);
+        setpri.setPrice(p);
     }
     public void setInitialValues(){
-        siv.setInitialValues(d);
+        siv.setInitialValues();
     }
     public void pumpGasUnit(){
         pgu.pumpGasUnit(d);
@@ -71,29 +73,28 @@ public class OutputProcessor{
         gpm.gasPumpedMsg();
     }
     public void printReceipt(){
-        pr.printReceipt(d);
+        pr.printReceipt();
     }
     public void cancelMsg(){
         cm.cancelMsg();
     }
     public void returnCash(){
-        rc.returnCash(d);
+        rc.returnCash();
     }
     public void wrongPinMsg(){
         wpm.wrongPinMsg();
     }
     public void storePin(){
-        spin.storePin(d);
+        spin.storePin();
     }
     public void enterPinMsg(){
         epm.enterPinMsg();
     }
     public void initializeData(){
-        id.initializeData(d);
+        id.initializeData();
     }
     public void ejectCard(){
         ec.ejectCard();
     }
-    public void setW(int w) { sw.setW(w, d);}
 
 }

@@ -1,5 +1,3 @@
-//**STATE PATTERN**
-//State where pay credit was selected by user.  Waiting to see if card will be approved or rejected.
 public class PayCreditState extends State {
     MDA_EFSM m;
     OutputProcessor op;
@@ -7,7 +5,6 @@ public class PayCreditState extends State {
     public PayCreditState(MDA_EFSM mda, OutputProcessor p){
         m = mda;
         op = p;
-        //Do action to determine if card is acceptable or not.
     }
     public void activate(){
 

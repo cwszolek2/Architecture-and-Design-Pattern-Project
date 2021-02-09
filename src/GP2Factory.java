@@ -1,6 +1,4 @@
-//**ABSTRACT FACTORY**
-//Child of AbstractFactory - this is for GP1's usage to create
-//actions for GP1.
+
 public class GP2Factory extends AbstractFactory {
     public DS2 makeDataStore(){
         return new DS2();
@@ -56,6 +54,7 @@ public class GP2Factory extends AbstractFactory {
     public EjectCard makeEjectCard(){
         return new EjectCard2();
     }
-    public SetW makeSetW(){ return new SetW2();
+    public void setW(int i){
+        //Figure out how this works
     }
 }

@@ -1,5 +1,4 @@
-//**STATE PATTERN**
-//State after idle state has begun, user selects which payment method they will use.
+
 public class StartState extends State {
     MDA_EFSM m;
     OutputProcessor op;
@@ -18,7 +17,7 @@ public class StartState extends State {
         //I guess nothing needed for store cash?  weird.
         op.storeCash();
         op.displayMenu();
-        op.setW(0);
+        op.setW(1);
         m.changeState(5);
     }
     public void payCredit(){

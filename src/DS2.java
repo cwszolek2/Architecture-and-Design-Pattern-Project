@@ -1,5 +1,3 @@
-//STATE PATTERN
-//DataStore for GP2's methods.
 
 public class DS2 extends DataStore {
     float temp_a;

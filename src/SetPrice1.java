@@ -1,14 +1,9 @@
-//**STRATEGY PATTERN**
-//ACTION
-// A child of SetPrice, this is a created as a part of the GasPump1 process.
-//Sets price to a certain amount.
+
 public class SetPrice1 extends SetPrice {
     public SetPrice1(){
 
     }
-    @Override
-    public void setPrice(int g, DataStore ds){
-        DS1 d = (DS1) ds;
+    public void setPrice(int g, DS1 d){
         if(g == 1)
             d.price = d.temp_a;
         else{

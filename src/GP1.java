@@ -1,6 +1,4 @@
-//Primary class of implementation
-//Represents a gas pump of type 1.
-//Part of Abstract Factory Pattern.
+
 public class GP1{
     MDA_EFSM m;
     DS1 d;
@@ -10,8 +8,8 @@ public class GP1{
     // Constructor
     public GP1() {
     }
-    //Creates Application of abstract factory, datastore, output processor, and mda_efsm.
-    public void activate(int a){
+
+    public void Activate(int a){
         if (a > 0){
             af = new GP1Factory();
             d = af.makeDataStore();
@@ -21,42 +19,39 @@ public class GP1{
             m.activate();
         }
     }
-    public void payCash(int c){
+    public void PayCash(int c){
         if (c > 0){
             d.temp_c = c;
             m.payCash();
         }
     }
-    public void payCredit(){
+    public void PayCredit(){
         m.payCredit();
     }
-    public void approved(){
+    public void Approved(){
         m.approved();
     }
-    public void reject(){
+    public void Reject(){
         m.reject();
     }
-    public void cancel(){
+    public void Cancel(){
         m.cancel();
     }
-    public void startPump(){
+    public void StartPump(){
         m.startPump();
     }
-    public void pumpLiter(){
+    public void PumpLiter(){
         if(d.w == 1){
             m.pump();
         }
         else if ((d.cash > 0) && (d.cash < d.price*(d.L + 1))) {
             m.stopPump();
         }
-        else{
-            m.pump();
-        }
     }
-    public void stopPump(){
+    public void StopPump(){
         m.stopPump();
     }
-    public void start(){
+    public void Start(){
         m.start();
     }
 }

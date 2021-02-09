@@ -1,7 +1,3 @@
-//**MDA-EFSM ARCHITECTURE**
-//**STATE PATTERN**
-//
-//Handles the creation of states, and provides methods to use them.
 public class MDA_EFSM{
     State s;
     State[] state_array;
@@ -9,7 +5,7 @@ public class MDA_EFSM{
 
     public MDA_EFSM(OutputProcessor p){
         //Add whatever needs to be here.
-        state_array = new State[7];
+        state_array = new State[6];
         state_array[0] = new OffState(this, p);
         state_array[1] = new IdleState(this, p);
         state_array[2] = new StartState(this, p);

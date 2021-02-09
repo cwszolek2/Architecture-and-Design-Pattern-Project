@@ -1,11 +1,11 @@
-//**ABSTRACT FACTORY**
-//Child of AbstractFactory - this is for GP1's usage to create
-//actions for GP1.
+
 public class GP1Factory extends AbstractFactory {
     public DS1 makeDataStore(){
         return new DS1();
     }
-    public StorePrices makeStorePrices(){ return new StorePrices1(); }
+    public StorePrices makeStorePrices(){
+        return new StorePrices1();
+    }
     public PayMsg makePayMsg() {
         return new PayMsg1();
     }
@@ -18,7 +18,8 @@ public class GP1Factory extends AbstractFactory {
     public RejectMsg makeRejectMsg() {
         return new RejectMsg1();
     }
-    public SetPrice makeSetPrice() { return new SetPrice1();  }
+    public SetPrice makeSetPrice() { return new SetPrice1();
+    }
     public SetInitialValues makeSetInitialValues() {
         return new SetInitialValues1();
     }
@@ -52,5 +53,7 @@ public class GP1Factory extends AbstractFactory {
     public EjectCard makeEjectCard() {
         return new EjectCard1();
     }
-    public SetW makeSetW(){ return new SetW1();  }
+    public void setW(int i){
+        //TODO Figure out if anything is required by setW
+    }
 }

@@ -1,7 +1,4 @@
-//**ABSTRACT FACTORY**
-//This is an abstract class that is inherited as part of the abstract factory pattern.  Methods
-//will create classes.  Children are specific iterations of the Gas Pump that will use specific
-//implementations of their own versions of these methods.
+
 public abstract class AbstractFactory{
     public abstract DataStore makeDataStore();
     public abstract PayMsg makePayMsg();
@@ -21,5 +18,5 @@ public abstract class AbstractFactory{
     public abstract EnterPinMsg makeEnterPinMsg();
     public abstract InitializeData makeInitializeData();
     public abstract EjectCard makeEjectCard();
-    public abstract SetW makeSetW();
+    public abstract void setW(int i);
 }
