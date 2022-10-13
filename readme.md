@@ -12,7 +12,7 @@ This application represents an application of several design architectures and p
 where the goal was to apply their usage to a working application.
 
 Design Patterns and Architectures used:
-- Model Drive Architecture - Extended Finite State Machine  
+- Model Driven Architecture - Extended Finite State Machine  
 - Abstract Factory Pattern
 - State Pattern
 - Strategy Pattern
