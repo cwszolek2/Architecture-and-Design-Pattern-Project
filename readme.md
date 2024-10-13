@@ -4,6 +4,7 @@
 *Note - Weird naming conventions encouraged by professor - this is not endorsed by me - CW*
 
 *This represents an early version, and could use additional exception handling, testing, and bug fixes*
+
 For University class project:  
 Chris Wszolek
 Compiled in Java 12.0.1
